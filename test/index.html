@@ -21,6 +21,10 @@
             text-align: center;
         }
 
+        p {
+            text-align: center;
+        }
+
         #searchContainer {
             display: flex;
             justify-content: center;
@@ -64,6 +68,8 @@
     
     <div id="gifGrid"></div>
 
+    <p>Made in ❤️ with Tenor || Website Last Updated: 29-11-2023</p>
+
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
@@ -93,7 +99,9 @@
         function getTrendingGifs() {
             var apiKey = "AIzaSyBp-TxEofbDdxmBa6T-MCyb6rDG4_NVknE"; // Replace with your API key
             var clientKey = "heatic-test-app"; // Replace with your client key
-            var limit = 8;
+            var limit = 20;
+            var ar_range = "wide";
+            var pos = 1;
 
             var trendingUrl = "https://tenor.googleapis.com/v2/featured?key=" + apiKey + "&client_key=" + clientKey + "&limit=" + limit;
 
@@ -115,7 +123,7 @@
 
             gifs.forEach(function (gif) {
                 var gifImage = document.createElement("img");
-                gifImage.src = gif["media_formats"]["gif"]["url"]; //if you use nanogif instead of gif it will load faster
+                gifImage.src = gif["media_formats"]["nanogif"]["url"]; //if you use nanogif instead of gif it will load faster
                 gifImage.alt = "GIF";
                 gifImage.className = "gifImage";
                 gifGrid.appendChild(gifImage);
@@ -147,10 +155,12 @@
         function grabData(searchTerm) {
             var apiKey = "AIzaSyBp-TxEofbDdxmBa6T-MCyb6rDG4_NVknE"; // Replace with your API key
             var clientKey = "heatic-test-app"; // Replace with your client key
-            var limit = 8;
+            var limit = 20;
+            var ar_range = "wide";
+            var pos = 1;
 
             var searchUrl = "https://tenor.googleapis.com/v2/search?q=" + searchTerm +
-                "&key=" + apiKey + "&client_key=" + clientKey + "&limit=" + limit;
+                "&key=" + apiKey + "&client_key=" + clientKey + "&limit=" + limit + "&random=true";
 
             httpGetAsync(searchUrl, tenorCallbackSearch);
         }
