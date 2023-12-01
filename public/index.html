@@ -25,6 +25,10 @@
             text-align: center;
         }
 
+        li {
+            text-align: center; 
+        }
+
         #searchContainer {
             display: flex;
             justify-content: center;
@@ -113,6 +117,11 @@
 <body>
 
     <h2>GIFs</h2>
+    <p>
+        <li>No Censor Content. No censoring on search results</li>
+        <li>Access to 1000 of GIFs.</li>
+        <li>Download gif by clicking on it.</li>
+    </p>
 
     <div id="searchContainer">
         <input type="text" id="searchInput" placeholder="Enter search term">
@@ -152,6 +161,9 @@
     </script>  
 
     <script>
+        var userAgent = navigator.userAgent;
+        console.log("User Agent:", userAgent);
+
         // Function to get trending GIFs by default
         function getTrendingGifs() {
             var apiKey = "AIzaSyBp-TxEofbDdxmBa6T-MCyb6rDG4_NVknE"; // Replace with your API key
