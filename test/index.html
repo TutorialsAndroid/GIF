@@ -10,6 +10,11 @@
     <meta property="og:image" content="https://gif-loader-example.web.app/res/images/image_header.png"> <!-- URL to your logo/banner image -->
     <meta property="og:url" content="https://gif-loader-example.web.app"> <!-- URL of the shared page -->
 
+    <link rel="apple-touch-icon" sizes="180x180" href="res/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="res/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="res/favicon-16x16.png">
+    <link rel="manifest" href="res/site.webmanifest">
+
     <title>GIF Search</title>
     <style>
         body {
@@ -134,7 +139,7 @@
     
     <div id="gifGrid"></div>
 
-    <p>Made in ❤️ with Tenor || Website Last Updated: 29-11-2023</p>
+    <p>Made in ❤️ with Tenor || Website Last Updated: 02-12-2023</p>
 
     <script type="module">
         // Import the functions you need from the SDKs you need
@@ -292,23 +297,11 @@
             downloadButton.addEventListener("click", function () {
                 downloadGif(originalUrl);
             });
-
-            // Inside the enlargeGif function
-var whatsappButton = document.createElement("button");
-whatsappButton.className = "downloadButton";
-whatsappButton.textContent = "Share to WhatsApp";
-whatsappButton.addEventListener("click", function () {
-    shareToWhatsApp(originalUrl);
-});
-
-
-
-
+            
             // Append the components to the modal
             modal.appendChild(enlargedGif);
             modal.appendChild(closeButton);
             modal.appendChild(downloadButton);
-            modal.appendChild(whatsappButton);
 
             // Append the modal to the body
             document.body.appendChild(modal);
