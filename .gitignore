@@ -68,3 +68,13 @@ firestore.rules
 firebase.json
 database.rules.json
 firestore.indexes.json
+public_backup/02-12-23/public/index.html
+public_backup/02-12-23/public/res/android-chrome-512x512.png
+public_backup/02-12-23/public/res/android-chrome-192x192.png
+public_backup/02-12-23/public/res/apple-touch-icon.png
+public_backup/02-12-23/public/res/favicon-16x16.png
+public_backup/02-12-23/public/res/favicon-32x32.png
+public_backup/02-12-23/public/res/favicon.ico
+public_backup/02-12-23/public/res/icon.png
+public_backup/02-12-23/public/res/images/image_header.png
+public_backup/02-12-23/public/res/site.webmanifest
