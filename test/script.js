@@ -6,8 +6,6 @@ function getTrendingGifs() {
     var apiKey = "AIzaSyBp-TxEofbDdxmBa6T-MCyb6rDG4_NVknE"; // Replace with your API key
     var clientKey = "heatic-test-app"; // Replace with your client key
     var limit = 20;
-    var ar_range = "wide";
-    var pos = 1;
 
     var trendingUrl = "https://tenor.googleapis.com/v2/featured?key=" + apiKey + "&client_key=" + clientKey + "&limit=" + limit;
 
@@ -76,8 +74,6 @@ function grabData(searchTerm) {
     var apiKey = "AIzaSyBp-TxEofbDdxmBa6T-MCyb6rDG4_NVknE"; // Replace with your API key
     var clientKey = "heatic-test-app"; // Replace with your client key
     var limit = 20;
-    var ar_range = "wide";
-    var pos = 1;
 
     var searchUrl = "https://tenor.googleapis.com/v2/search?q=" + searchTerm +
         "&key=" + apiKey + "&client_key=" + clientKey + "&limit=" + limit + "&random=true";
@@ -93,8 +89,6 @@ function refreshData(searchTerm) {
     var apiKey = "AIzaSyBp-TxEofbDdxmBa6T-MCyb6rDG4_NVknE"; // Replace with your API key
     var clientKey = "heatic-test-app"; // Replace with your client key
     var limit = 20;
-    var ar_range = "wide";
-    var pos = 1;
 
     var searchUrl = "https://tenor.googleapis.com/v2/search?q=" + searchTerm +
         "&key=" + apiKey + "&client_key=" + clientKey + "&limit=" + limit + "&random=true";
@@ -159,20 +153,6 @@ function downloadGif(url) {
             document.body.removeChild(a);
         })
         .catch(error => console.error('Error downloading GIF:', error));
-}
-
-function shareToWhatsApp(gifUrl) {
-    // Create a temporary hidden link element
-    var link = document.createElement('a');
-    link.href = gifUrl;
-    link.target = '_blank';
-    document.body.appendChild(link);
-
-    // Trigger a click on the link to open the image in a new tab
-    link.click();
-
-    // Remove the link from the body
-    document.body.removeChild(link);
 }
 
 // Load trending GIFs by default when the page loads
