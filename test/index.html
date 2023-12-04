@@ -364,23 +364,19 @@
         }
 
         function shareToWhatsApp(gifUrl) {
-    // Create a temporary hidden link element
-    var link = document.createElement('a');
-    link.href = gifUrl;
-    link.target = '_blank';
-    document.body.appendChild(link);
+            // Create a temporary hidden link element
+            var link = document.createElement('a');
+            link.href = gifUrl;
+            link.target = '_blank';
+            document.body.appendChild(link);
 
-    // Trigger a click on the link to open the image in a new tab
-    link.click();
+            // Trigger a click on the link to open the image in a new tab
+            link.click();
 
-    // Remove the link from the body
-    document.body.removeChild(link);
-}
-
-
-
-
-
+            // Remove the link from the body
+            document.body.removeChild(link);
+        }
+        
         // Load trending GIFs by default when the page loads
         window.onload = function () {
             getTrendingGifs();
